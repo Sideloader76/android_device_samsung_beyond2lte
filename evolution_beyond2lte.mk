@@ -33,17 +33,35 @@ TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 3040
 TARGET_SCREEN_WIDTH := 1440
 
-## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+## Inherit some common Evolution stuff
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+
+TARGET_ENABLE_BLUR := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_USES_PICO_GAPPS := true
+TARGET_INCLUDE_GRAMOPHONE := true
+TARGET_BUILD_VIMUSIC := true
+TARGET_BUILD_APERTURE_CAMERA := false
+TARGET_SUPPORTS_TOUCHGESTURES := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
+EVO_BUILD_TYPE := UNOFFICIAL
 
 ## Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 ## Device identifier, this must come after all inclusions
-PRODUCT_NAME := lineage_beyond2lte
+PRODUCT_NAME := evolution_beyond2lte
 PRODUCT_DEVICE := beyond2lte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G975F
 PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# Some Extra Stuffs.
+EVO_SUPPORT_URL := https://t.me/FrEeRuNnEr4EvErHeLp
+EVO_SIGNED := true
+BUILD_USERNAME := Mgm2023
+BUILD_HOSTNAME := Evolution-X
